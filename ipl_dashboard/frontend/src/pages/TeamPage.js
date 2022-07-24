@@ -1,7 +1,9 @@
 import {React, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { LargeDetailedCard } from '../component/LargeDetailedCard'
-import { SmallDetailedCard } from '../component/SmallDetailedCard'
+import { LargeDetailedCard } from '../component/LargeDetailedCard';
+import { SmallDetailedCard } from '../component/SmallDetailedCard';
+import { PieChartCard } from '../component/PieChartCard';
+import { Teampage } from '../styles/Teampage.css';
 
 export const TeamPage=() => {
 
@@ -28,10 +30,27 @@ export const TeamPage=() => {
 
     return (
        <div className='TeamPage'>
-       <h1>{team.teamName}</h1>
-       <h3>Match Details</h3>
-       <LargeDetailedCard teamName = {team.teamName} match = {team.matches[0]}/>
-       {team.matches.slice(1).map (match => <SmallDetailedCard teamName = {team.teamName} match = {match}/>)}
+         <div className="teamnameContainer">
+           <h1>{team.teamName}</h1>
+         </div>
+
+         <div className="win-lossDetailsContainer">
+          <h3>Wins/Losses</h3>
+           <PieChartCard className="piechartcard" win = {team.totalWins} matches = {team.totalMatches}/>
+         </div>
+       
+         <div className="largeDetailedCardContainer">
+           <LargeDetailedCard teamName = {team.teamName} match = {team.matches[0]}/>
+         </div>
+       
+         <div className="smallDetailCardContainer">
+           {team.matches.slice(1).map (match => <SmallDetailedCard teamName = {team.teamName} match = {match}/>)}
+         </div>
+
+
+         <div className='more-section'>
+            <a className='more-link' href="#">more</a>
+         </div>
        </div>
     )
 }

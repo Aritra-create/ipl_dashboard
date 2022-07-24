@@ -1,0 +1,17 @@
+.SmallDetailedCard{
+    background-color: #BC6C25;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+.SmallDetailedCard .vs{
+    font-size: 0.9rem;
+}
+
+.SmallDetailedCard .teamname{
+    font-size: 1.35rem;
+}
+
+.match-winner, .match-date{
+    margin: 5px 0px;
+}

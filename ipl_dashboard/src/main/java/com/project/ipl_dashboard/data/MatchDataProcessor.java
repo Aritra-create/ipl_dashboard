@@ -2,13 +2,17 @@ package com.project.ipl_dashboard.data;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.batch.item.ItemProcessor;
 
+import com.fasterxml.jackson.databind.introspect.DefaultAccessorNamingStrategy.FirstCharBasedValidator;
 import com.project.ipl_dashboard.model.Match;
+
+import antlr.collections.List;
 
 public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
 
@@ -41,6 +45,8 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
         }
         match.setTeam1(firstInningsTeam);
         match.setTeam2(secondInningsTeam);
+    
+        
 
         match.setTossWinner(matchInput.getToss_winner());
         match.setTossDecision(matchInput.getToss_decision());
@@ -49,7 +55,7 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
         match.setResultMargin(matchInput.getResult_margin());
         match.setUmpire1(matchInput.getUmpire1());
         match.setUmpire2(matchInput.getUmpire2());
-
+        
         return match;
     }
 

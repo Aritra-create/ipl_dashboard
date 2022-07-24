@@ -1,28 +1,43 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import { LargeDetailedCard } from '../component/LargeDetailedCard';
+import { Matchpage } from '../styles/Matchpage.css'
 import { useParams } from 'react-router-dom';
+import { YearSelector } from '../component/YearSelector';
 
 export const MatchPage = () => {
-  const [match, setMatch] = useState([]);
-  const { teamName, year } = useParams();
 
-  useState(
-    ()=>{
-        const fetchMatches =async () => {
+
+    const [matches, setMatches] = useState([]);
+    const { teamName, year } = useParams();
+    useEffect(
+        () => {
+         const fetchMatches = async () => {
             const response = await fetch(`http://localhost:8080/team/${teamName}/matches?year=${year}`);
-            const data =await response.json();
-            setMatch(data);
-        };
-        fetchMatches();
-    },[]
-  )
+            const data = await response.json();
+            setMatches(data);
 
-  return (
-    <div className='MatchPage'>
-      <h1>{teamName}</h1>
-      {
-        match.map(match => <LargeDetailedCard teamName = {teamName} match = {match}/>)
-      }
-    </div>
-  )
+         };
+         fetchMatches();
+            
+
+
+        }, [teamName, year]
+    );
+
+   
+    return (
+        <div className="MatchPage">
+            <div className="yearSelector">
+                <h1> Select Year </h1>
+                <YearSelector teamName={teamName} />
+            </div>
+            <div>
+                <h1 className="page-title">{teamName} matches in {year}</h1>
+                {
+                    matches.map(match => <LargeDetailedCard teamName={teamName} match={match} />)
+                }
+            </div>
+
+        </div>
+    );
 }
