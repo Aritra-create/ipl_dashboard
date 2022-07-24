@@ -1,5 +1,5 @@
 import {React, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { LargeDetailedCard } from '../component/LargeDetailedCard';
 import { SmallDetailedCard } from '../component/SmallDetailedCard';
 import { PieChartCard } from '../component/PieChartCard';
@@ -49,7 +49,7 @@ export const TeamPage=() => {
 
 
          <div className='more-section'>
-            <a className='more-link' href="#">more</a>
+            <Link to={`/teams/${teamName}/matches/2015`}>more</Link>
          </div>
        </div>
     )

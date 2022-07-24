@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import { LargeDetailedCard } from '../component/LargeDetailedCard';
 import { Matchpage } from '../styles/Matchpage.css'
 import { useParams } from 'react-router-dom';
