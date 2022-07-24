@@ -1,0 +1,15 @@
+.year-selector{
+    text-align: right;
+    list-style: none;
+    color: #000;
+}
+
+.yearSelector li{
+    color: #000;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.yearSelector li a:hover{
+    color: blue;
+}

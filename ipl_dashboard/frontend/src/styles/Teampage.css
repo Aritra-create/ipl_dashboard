@@ -1,0 +1,55 @@
+.TeamPage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 8px;
+    column-gap: 10px;
+    max-height: 90vh;   
+}
+
+.TeamPage .teamnameContainer{
+    grid-column: span 3;
+    align-self: end;
+    color: #000;
+}
+
+.TeamPage .teamnameContainer h1{
+    font-size: 3.5rem;
+}
+
+.win-lossDetailsContainer{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    color: #000;
+}
+
+.TeamPage .largeDetailedCardContainer{
+    grid-column: span 4;
+}
+
+.TeamPage .smallDetailCardContainer{
+    grid-column: span 3;
+}
+
+.smallDetailCardContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+}
+
+.more-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.more-section a{
+    color: #000;
+    font-weight: bold;
+}
+
+.more-section a:hover{
+    color: rgba(0, 0, 0, 0.446);
+}

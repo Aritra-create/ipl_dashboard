@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class IplDashboardApplication {
 
 	public static void main(String[] args) {
-		//main
+		
 		SpringApplication.run(IplDashboardApplication.class, args);
 	}
 
