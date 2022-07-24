@@ -1,0 +1,15 @@
+.team{
+    color: #BC6C25;
+}
+
+.team:hover{
+    color: blue;
+}
+
+.TeamTile {
+    height: 75px;
+    text-align: center;
+    border: 1px solid #283618;
+    padding: 20px;
+
+}
