@@ -53,3 +53,21 @@
 .more-section a:hover{
     color: rgba(0, 0, 0, 0.446);
 }
+
+@media screen and (max-width: 768px) {
+    .TeamPage .teamnameContainer h1{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .TeamPage .teamnameContainer h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .TeamPage .teamnameContainer h1{
+        font-size: 2rem;
+    }
+}

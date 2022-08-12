@@ -6,6 +6,10 @@
     margin-bottom: 4px;
 }
 
+.LargeDetailedCard h1{
+    font-size: 2.5rem;
+}
+
 .match-summary{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -23,5 +27,36 @@
 .matchres{
     grid-column: span 2;
     text-align: center;
+}
+
+@media screen and (max-width:576px) {
+    .LargeDetailedCard h1{
+        font-size: 2rem;
+    }
+    .LargeDetailedCard .match-summary{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .LargeDetailedCard h1{
+        font-size: 1.5rem;
+    }
+    .LargeDetailedCard{
+        padding: 10px;
+    }
+    .LargeDetailedCard .match-summary{
+        grid-template-columns: 1fr;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .LargeDetailedCard h1{
+        font-size: 1.2rem;
+    }
+    .LargeDetailedCard .match-extra-detail{
+        font-size: 0.7rem;
+    }
 }
 

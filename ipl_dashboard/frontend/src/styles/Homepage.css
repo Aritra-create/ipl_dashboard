@@ -12,3 +12,25 @@
     grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .HomePage .app-name{
+        font-size: 2rem;
+    }
+
+    .HomePage .team-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .HomePage .app-name{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .HomePage .app-name{
+        font-size: 1.5rem;
+    }
+}

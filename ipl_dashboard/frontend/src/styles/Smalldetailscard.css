@@ -15,3 +15,15 @@
 .match-winner, .match-date{
     margin: 5px 0px;
 }
+
+@media screen and (max-width: 576px) {
+    .SmallDetailedCard .teamname{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 489px) {
+    .SmallDetailedCard .teamname{
+        font-size: 1rem;
+    }
+}

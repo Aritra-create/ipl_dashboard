@@ -9,7 +9,7 @@ export const HomePage = () => {
     useEffect(
         () => {
             let isCancelled =false;
-         const fetchAllTeams = async () => {
+            const fetchAllTeams = async () => {
             const response = await fetch('http://localhost:8080/team');
             const data = await response.json();
             if(!isCancelled)
